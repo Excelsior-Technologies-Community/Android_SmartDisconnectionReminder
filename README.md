@@ -18,8 +18,7 @@ It is designed to be simple, battery-efficient, and lifecycle-safe, making it id
 - Lifecycle-friendly (start() / stop())
 - No background services required
 - Clean callback-based API
-- Minimal permissions
-- Library-module friendly & publish-ready
+- Minimal permission
 
 ---
 
@@ -94,6 +93,13 @@ override fun onStop() {
     super.onStop()
     smartDisconnect.stop()
 }
+```
+
+### Required Permission
+
+Add this permission to your app manifest:
+```kotlin
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 ```
 
 ---
